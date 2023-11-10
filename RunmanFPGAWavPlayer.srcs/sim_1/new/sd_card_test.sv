@@ -32,9 +32,9 @@ module sd_card_test(
     runman_top DUT(
     .Clk(Clk),
     .reset_rtl_0(~reset_rtl_0),
-    .data_from_sd(data_from_sd),
-    .almost_full(almost_full),
-    .data_from_fifo(data_from_fifo),
+//    .data_from_sd(data_from_sd),
+//    .almost_full(almost_full),
+//    .data_from_fifo(data_from_fifo),
     .hex_segA(hex_segA),
     .hex_gridA(hex_gridA)
     );

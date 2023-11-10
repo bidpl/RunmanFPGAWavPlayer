@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Fri Nov 10 16:05:44 2023
+| Date         : Fri Nov 10 16:29:52 2023
 | Host         : ECEB-3022-09 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file runman_top_methodology_drc_routed.rpt -pb runman_top_methodology_drc_routed.pb -rpx runman_top_methodology_drc_routed.rpx
 | Design       : runman_top
@@ -23,15 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 8
-+-----------+------------------+------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                      | Violations |
-+-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree               | 1          |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1          |
-| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| TIMING-18 | Warning          | Missing input or output delay                                    | 5          |
-+-----------+------------------+------------------------------------------------------------------+------------+
+             Violations found: 19
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                      | 17         |
++-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -43,11 +42,6 @@ Related violations: <none>
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock data_manager_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin data_manager_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
-Related violations: <none>
-
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net Clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): Clk_IBUF_inst/O, data_manager_i/clk_100MHz, hex_seg_dis/Clk
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -73,6 +67,66 @@ Related violations: <none>
 TIMING-18#5 Warning
 Missing input or output delay  
 An output delay is missing on hex_gridA[3] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on hex_gridB[0] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on hex_gridB[1] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on hex_gridB[2] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on hex_gridB[3] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[0] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[1] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[2] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[3] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[4] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[5] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[6] relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on hex_segA[7] relative to clock(s) clk_100
 Related violations: <none>
 
 

@@ -23,12 +23,14 @@
 module runman_top(
     input logic Clk,
     input logic reset_rtl_0,
-    output logic [15:0] data_from_sd,
-    output logic almost_full,
-    output logic [15:0] data_from_fifo,
+//    output logic [15:0] data_from_sd,
+//    output logic almost_full,
+//    output logic [15:0] data_from_fifo,
     
     output logic [7:0] hex_segA,
-    output logic [3:0] hex_gridA
+    output logic [3:0] hex_gridA,
+    output logic [7:0] hex_segB,
+    output logic [3:0] hex_gridB
     );
     
     logic clk_50;
@@ -40,7 +42,7 @@ module runman_top(
     logic full;
     logic ram_init_done;
     logic wr_en;
-    logic rd_en;
+    logic test = 1;
     logic ram_init_error;
     logic ram_op_begun;
     logic [24:0] ram_address;
@@ -48,10 +50,7 @@ module runman_top(
     logic cs_bo;
     logic sclk_o;
     logic mosi_o;
-    logic miso_i;
-    
-    
-    
+    logic miso_i;    
     
     
     sdcard_init sdcard_init_i
@@ -61,7 +60,8 @@ module runman_top(
 	.ram_we(ram_we),         //RAM interface pins
 	.ram_address(ram_address),
 	.ram_data(data_from_sd),
-	.ram_op_begun(~almost_full),   //acknowledge from RAM to move to next word
+	.ram_op_begun(test),   //acknowledge from RAM to move to next word
+//	.ram_op_begun(~almost_full),   //acknowledge from RAM to move to next word
 	.ram_init_error(ram_init_error), //error initializing
 	.ram_init_done(ram_init_done),  //done with reading all MAX_RAM_ADDRESS words
 	.cs_bo(cs_bo), //SD card pins (also make sure to disable USB CS if using DE10-Lite)
@@ -73,7 +73,7 @@ module runman_top(
     
     data_manager data_manager_i
     (
-    .rd_en(rd_en),
+    .rd_en(ram_we),
     .wr_en(wr_en),
     .din(data_from_sd),
     .srst(reset_rtl_0),
@@ -87,12 +87,20 @@ module runman_top(
     .almost_full(amlost_full)
     );
     
-    HexDriver hex_seg_dis(
+    HexDriver hex_seg_disA(
+    .clk(Clk),
+    .reset(reset_rtl_0),
+    .in({ram_address[15:12], ram_address[11:8], ram_address[7:4], ram_address[3:0]}),
+    .hex_seg(hex_segA),
+    .hex_grid(hex_gridA)  
+    );
+    
+    HexDriver hex_seg_disB(
     .clk(Clk),
     .reset(reset_rtl_0),
     .in({data_from_sd[15:12], data_from_sd[11:8], data_from_sd[7:4], data_from_sd[3:0]}),
-    .hex_seg(hex_segA),
-    .hex_grid(hex_gridA)  
+    .hex_seg(hex_segB),
+    .hex_grid(hex_gridB)  
     );
     
 endmodule
