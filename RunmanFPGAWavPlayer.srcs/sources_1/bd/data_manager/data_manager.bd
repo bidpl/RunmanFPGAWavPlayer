@@ -1,0 +1,258 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7FFCF8FC2722A942",
+      "device": "xc7s50csga324-1",
+      "gen_directory": "../../../../RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager",
+      "name": "data_manager",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fifo_generator_0": "",
+      "clk_wiz_0": ""
+    },
+    "ports": {
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "data_manager_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset_rtl_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "full": {
+        "direction": "O"
+      },
+      "almost_full": {
+        "direction": "O"
+      },
+      "empty": {
+        "direction": "O"
+      },
+      "almost_empty": {
+        "direction": "O"
+      },
+      "dout": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "wr_en": {
+        "direction": "I"
+      },
+      "rd_en": {
+        "direction": "I"
+      },
+      "din": {
+        "type": "data",
+        "direction": "I",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "srst": {
+        "direction": "I"
+      },
+      "clk_50": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/clk_wiz_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "50000000",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "data_manager_fifo_generator_0_0",
+        "xci_path": "ip\\data_manager_fifo_generator_0_0\\data_manager_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "Almost_Empty_Flag": {
+            "value": "true"
+          },
+          "Almost_Full_Flag": {
+            "value": "true"
+          },
+          "Input_Data_Width": {
+            "value": "16"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "data_manager_clk_wiz_0_0",
+        "xci_path": "ip\\data_manager_clk_wiz_0_0\\data_manager_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "151.636"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50.000"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "151.636"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "50.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "false"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "20.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "fifo_generator_0/clk",
+          "clk_50"
+        ]
+      },
+      "din_1": {
+        "ports": [
+          "din",
+          "fifo_generator_0/din"
+        ]
+      },
+      "fifo_generator_0_almost_empty": {
+        "ports": [
+          "fifo_generator_0/almost_empty",
+          "almost_full"
+        ]
+      },
+      "fifo_generator_0_almost_full": {
+        "ports": [
+          "fifo_generator_0/almost_full",
+          "almost_empty"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "dout"
+        ]
+      },
+      "fifo_generator_0_empty": {
+        "ports": [
+          "fifo_generator_0/empty",
+          "empty"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "fifo_generator_0/full",
+          "full"
+        ]
+      },
+      "rd_en_1": {
+        "ports": [
+          "rd_en",
+          "fifo_generator_0/rd_en"
+        ]
+      },
+      "reset_rtl_0_1": {
+        "ports": [
+          "reset_rtl_0",
+          "clk_wiz_0/reset"
+        ]
+      },
+      "srst_1": {
+        "ports": [
+          "srst",
+          "fifo_generator_0/srst"
+        ]
+      },
+      "wr_en_1": {
+        "ports": [
+          "wr_en",
+          "fifo_generator_0/wr_en"
+        ]
+      }
+    }
+  }
+}

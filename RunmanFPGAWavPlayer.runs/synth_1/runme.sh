@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log sdcard_init.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sdcard_init.tcl
+EAStep vivado -log runman_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source runman_top.tcl
