@@ -115,6 +115,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -122,7 +124,10 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
+  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 3
+  set_param synth.incrementalSynthesisCache C:/Users/ramseyv2/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-29668-ECEB-3022-14/incrSyn
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
@@ -138,19 +143,14 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/runman_top.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/bd/data_manager/data_manager.bd
-  set_param project.isImplRun false
+  read_ip -quiet c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/ip/ila_0/ila_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  set_param project.isImplRun true
   link_design -top runman_top -part xc7s50csga324-1 
 OPTRACE "link_design" END { }
-  set_param project.isImplRun false
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }

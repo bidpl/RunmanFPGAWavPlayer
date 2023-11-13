@@ -70,8 +70,13 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache C:/Users/ramseyv2/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-29668-ECEB-3022-14/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -88,22 +93,12 @@ set_property ip_output_repo c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFP
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv {
-  C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv
-  C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/sdcard_init.sv
-  C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv
-}
-read_vhdl -library xil_defaultlib {
-  C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/Common.vhd
-  C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/SDCard.vhd
-}
-add_files C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/bd/data_manager/data_manager.bd
-set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_fifo_generator_0_0/data_manager_fifo_generator_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_fifo_generator_0_0/data_manager_fifo_generator_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/data_manager_ooc.xdc]
+read_verilog -library xil_defaultlib -sv C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv
+read_ip -quiet c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/ip/ila_0/ila_0.xci
+set_property used_in_synthesis false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -117,8 +112,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc
 set_property used_in_implementation false [get_files C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/utils_1/imports/synth_1/sdcard_init.dcp

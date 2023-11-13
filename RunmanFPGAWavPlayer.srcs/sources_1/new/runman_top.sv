@@ -54,54 +54,64 @@ module runman_top(
     
     assign test = 1'b1;
     
-    sdcard_init sdcard_init_i
-    (
-    .clk50(clk_50),
-	.reset(reset_rtl_0),          //starts as soon reset is deasserted
-	.ram_we(ram_we),         //RAM interface pins
-	.ram_address(ram_address),
-	.ram_data(data_from_sd),
-	.ram_op_begun(test),   //acknowledge from RAM to move to next word
+//    sdcard_init sdcard_init_i
+//    (
+//    .clk50(clk_50),
+//	.reset(reset_rtl_0),          //starts as soon reset is deasserted
+//	.ram_we(ram_we),         //RAM interface pins
+//	.ram_address(ram_address),
+//	.ram_data(data_from_sd),
+////	.ram_op_begun(test),   //acknowledge from RAM to move to next word
 //	.ram_op_begun(~almost_full),   //acknowledge from RAM to move to next word
-	.ram_init_error(ram_init_error), //error initializing
-	.ram_init_done(ram_init_done),  //done with reading all MAX_RAM_ADDRESS words
-	.cs_bo(SD_DQ3), //SD card pins (also make sure to disable USB CS if using DE10-Lite)
-	.sclk_o(SD_CLK),
-	.mosi_o(SD_CMD),
-	.miso_i(SD_DQ0)
+//	.ram_init_error(ram_init_error), //error initializing
+//	.ram_init_done(ram_init_done),  //done with reading all MAX_RAM_ADDRESS words
+//	.cs_bo(SD_DQ3), //SD card pins (also make sure to disable USB CS if using DE10-Lite)
+//	.sclk_o(SD_CLK),
+//	.mosi_o(SD_CMD),
+//	.miso_i(SD_DQ0)
+//    );
+    
+    ila_0 your_instance_name (
+	.clk(Clk), // input wire clk
+
+
+	.probe0({9{test}}/*sdcard_init_i.state_r*/), // input wire [7:0]  probe0  
+	.probe1(9'd0/*sdcard_init_i.state_x*/), // input wire [7:0]  probe1 
+	.probe2(16'hA5A5/*ram_address*/), // input wire [15:0]  probe2 
+	.probe3(Clk) // input wire [0:0]  probe3
     );
     
     
-    data_manager data_manager_i
-    (
-    .rd_en(ram_we),
-    .wr_en(wr_en),
-    .din(data_from_sd),
-    .srst(reset_rtl_0),
-    .reset_rtl_0(reset_rtl_0),
-    .clk_100MHz(Clk),
-    .clk_50(clk_50),
-    .dout(data_from_fifo),
-    .empty(empty),
-    .almost_empty(amlost_empty),
-    .full(full),
-    .almost_full(amlost_full)
-    );
+//    data_manager data_manager_i
+//    (
+//    .rd_en(ram_we),
+//    .wr_en(wr_en),
+//    .din(data_from_sd),
+//    .srst(reset_rtl_0),
+//    .reset_rtl_0(reset_rtl_0),
+//    .clk_100MHz(Clk),
+//    .clk_50(clk_50),
+//    .dout(data_from_fifo),
+//    .empty(empty),
+//    .almost_empty(amlost_empty),
+//    .full(full),
+//    .almost_full(amlost_full)
+//    );
     
-    HexDriver hex_seg_disA(
-    .clk(Clk),
-    .reset(reset_rtl_0),
-    .in({ram_address[15:12], ram_address[11:8], ram_address[7:4], ram_address[3:0]}),
-    .hex_seg(hex_segA),
-    .hex_grid(hex_gridA)  
-    );
+//    HexDriver hex_seg_disA(
+//    .clk(Clk),
+//    .reset(reset_rtl_0),
+//    .in({ram_address[15:12], ram_address[11:8], ram_address[7:4], ram_address[3:0]}),
+//    .hex_seg(hex_segA),
+//    .hex_grid(hex_gridA)  
+//    );
     
-    HexDriver hex_seg_disB(
-    .clk(Clk),
-    .reset(reset_rtl_0),
-    .in({{test, ram_init_error, ram_init_done, ~almost_full}, data_from_sd[11:8], data_from_sd[7:4], data_from_sd[3:0]}),
-    .hex_seg(hex_segB),
-    .hex_grid(hex_gridB)  
-    );
+//    HexDriver hex_seg_disB(
+//    .clk(Clk),
+//    .reset(reset_rtl_0),
+//    .in({{test, ram_init_error, ram_init_done, ~almost_full}, data_from_sd[11:8], data_from_sd[7:4], data_from_sd[3:0]}),
+//    .hex_seg(hex_segB),
+//    .hex_grid(hex_gridB)  
+//    );
     
 endmodule

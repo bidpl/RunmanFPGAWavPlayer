@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Nov 13 16:23:00 2023
-# Process ID: 48752
+# Start of session at: Mon Nov 13 17:19:43 2023
+# Process ID: 53892
 # Current directory: C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1
 # Command line: vivado.exe -log runman_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source runman_top.tcl
 # Log file: C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/runman_top.vds
@@ -11,9 +11,6 @@
 # Running On: ECEB-3022-14, OS: Windows, CPU Frequency: 3312 MHz, CPU Physical cores: 6, Host memory: 16865 MB
 #-----------------------------------------------------------
 source runman_top.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 Command: read_checkpoint -auto_incremental -incremental C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/utils_1/imports/synth_1/sdcard_init.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/utils_1/imports/synth_1/sdcard_init.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,67 +23,74 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 40176
+INFO: [Synth 8-7075] Helper process launched with PID 35460
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'amlost_full', assumed default net type 'wire' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:88]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1820.441 ; gain = 408.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1837.980 ; gain = 408.707
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'runman_top' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'sdcard_init' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/sdcard_init.sv:18]
-INFO: [Synth 8-638] synthesizing module 'SdCardCtrl' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/SDCard.vhd:196]
-INFO: [Synth 8-256] done synthesizing module 'SdCardCtrl' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/SDCard.vhd:196]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/sdcard_init.sv:104]
-INFO: [Synth 8-6155] done synthesizing module 'sdcard_init' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/sdcard_init.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'data_manager' [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/synth/data_manager.v:12]
-INFO: [Synth 8-6157] synthesizing module 'data_manager_clk_wiz_0_0' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/.Xil/Vivado-48752-ECEB-3022-14/realtime/data_manager_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'data_manager_clk_wiz_0_0' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/.Xil/Vivado-48752-ECEB-3022-14/realtime/data_manager_clk_wiz_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'locked' of module 'data_manager_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/synth/data_manager.v:64]
-WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'data_manager_clk_wiz_0_0' has 4 connections declared, but only 3 given [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/synth/data_manager.v:64]
-INFO: [Synth 8-6157] synthesizing module 'data_manager_fifo_generator_0_0' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/.Xil/Vivado-48752-ECEB-3022-14/realtime/data_manager_fifo_generator_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'data_manager_fifo_generator_0_0' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/.Xil/Vivado-48752-ECEB-3022-14/realtime/data_manager_fifo_generator_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'data_manager' (0#1) [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/synth/data_manager.v:12]
-WARNING: [Synth 8-689] width (16) of port connection 'dout' does not match port width (32) of module 'data_manager' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:84]
-INFO: [Synth 8-6157] synthesizing module 'HexDriver' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'HexDriver' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:74]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/.Xil/Vivado-53892-ECEB-3022-14/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/.Xil/Vivado-53892-ECEB-3022-14/realtime/ila_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'runman_top' (0#1) [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:74]
+WARNING: [Synth 8-3848] Net hex_segA in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:30]
+WARNING: [Synth 8-3848] Net hex_gridA in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:31]
+WARNING: [Synth 8-3848] Net hex_segB in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:32]
+WARNING: [Synth 8-3848] Net hex_gridB in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:33]
+WARNING: [Synth 8-3848] Net SD_DQ3 in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:34]
+WARNING: [Synth 8-3848] Net SD_CLK in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:35]
 WARNING: [Synth 8-3848] Net SD_DQ0 in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:36]
-WARNING: [Synth 8-3848] Net almost_full in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:43]
-WARNING: [Synth 8-3848] Net wr_en in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:48]
+WARNING: [Synth 8-3848] Net SD_CMD in module/entity runman_top does not have driver. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv:37]
+WARNING: [Synth 8-7129] Port hex_segA[7] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[6] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[5] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[4] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[7] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[6] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[5] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[4] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_DQ3 in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_CLK in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_DQ0 in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_CMD in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_rtl_0 in module runman_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1925.676 ; gain = 514.043
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1925.676 ; gain = 514.043
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1925.676 ; gain = 514.043
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1925.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1930.938 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_fifo_generator_0_0/data_manager_fifo_generator_0_0/data_manager_fifo_generator_0_0_in_context.xdc] for cell 'data_manager_i/fifo_generator_0'
-Finished Parsing XDC File [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_fifo_generator_0_0/data_manager_fifo_generator_0_0/data_manager_fifo_generator_0_0_in_context.xdc] for cell 'data_manager_i/fifo_generator_0'
-Parsing XDC File [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_in_context.xdc] for cell 'data_manager_i/clk_wiz_0'
-Finished Parsing XDC File [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_in_context.xdc] for cell 'data_manager_i/clk_wiz_0'
+Parsing XDC File [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Finished Parsing XDC File [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
 Parsing XDC File [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc]
-CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_100' completely overrides clock 'Clk'.
-New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:1]
-Previous: create_clock -period 10.000 [get_ports Clk], [c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_in_context.xdc:1]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 WARNING: [Vivado 12-584] No ports matched 'uart_rtl_0_rxd'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:5]
 WARNING: [Vivado 12-584] No ports matched 'uart_rtl_0_txd'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:6]
 WARNING: [Vivado 12-584] No ports matched 'uart_rtl_0_rxd'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:9]
@@ -99,154 +103,54 @@ WARNING: [Vivado 12-584] No ports matched 'hdmi_tmds_data_n[2]'. [C:/Users/ramse
 WARNING: [Vivado 12-584] No ports matched 'hdmi_tmds_data_p[0]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:72]
 WARNING: [Vivado 12-584] No ports matched 'hdmi_tmds_data_p[1]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:73]
 WARNING: [Vivado 12-584] No ports matched 'hdmi_tmds_data_p[2]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:74]
-WARNING: [Vivado 12-584] No ports matched 'almost_full'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:76]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[0]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:77]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[1]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:78]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[2]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:79]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[3]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:80]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[4]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:81]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[5]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:82]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[6]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:83]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[7]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:84]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[8]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:85]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[9]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:86]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[10]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:87]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[11]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:88]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[12]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:89]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[13]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:90]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[14]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:91]
-WARNING: [Vivado 12-584] No ports matched 'data_from_sd[15]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:92]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[0]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:93]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[1]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:94]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[2]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:95]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[3]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:96]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[4]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:97]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[5]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:98]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[6]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:99]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[7]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:100]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[8]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:101]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[9]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:102]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[10]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:103]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[11]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:104]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[12]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:105]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[13]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:106]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[14]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:107]
-WARNING: [Vivado 12-584] No ports matched 'data_from_fifo[15]'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:108]
-WARNING: [Vivado 12-584] No ports matched 'SD_DQ1'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:113]
-WARNING: [Vivado 12-584] No ports matched 'SD_DQ2'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:114]
-WARNING: [Vivado 12-584] No ports matched 'SD_CD'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:118]
-WARNING: [Vivado 12-584] No ports matched 'SD_DQ1'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:120]
-WARNING: [Vivado 12-584] No ports matched 'SD_DQ2'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:121]
-WARNING: [Vivado 12-584] No ports matched 'SD_CD'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:125]
-WARNING: [Vivado 12-584] No ports matched 'SPKL'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:128]
-WARNING: [Vivado 12-584] No ports matched 'SPKR'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:129]
-WARNING: [Vivado 12-584] No ports matched 'SPKL'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:130]
-WARNING: [Vivado 12-584] No ports matched 'SPKR'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ1'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ2'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'SD_CD'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ1'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'SD_DQ2'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'SD_CD'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'SPKL'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'SPKR'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'SPKL'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'SPKR'. [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc:99]
 Finished Parsing XDC File [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/runman_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.srcs/constrs_1/imports/Downloads/sd_pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/runman_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/runman_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1999.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1930.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1999.785 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1930.938 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for Clk. (constraint file  c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for Clk. (constraint file  c:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_in_context.xdc, line 4).
-Applied set_property KEEP_HIERARCHY = SOFT for data_manager_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for data_manager_i/fifo_generator_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for data_manager_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for your_instance_name. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_r_reg' in module 'sdcard_init'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                   RESET |                        000000001 |                        000000000
-               READBLOCK |                        000000010 |                        000000001
-                    DONE |                        000000100 |                        000001000
-                 READH_0 |                        000001000 |                        000000100
-                 READH_1 |                        000010000 |                        000000101
-                 READL_0 |                        000100000 |                        000000010
-                 READL_1 |                        001000000 |                        000000011
-                   WRITE |                        010000000 |                        000000110
-                   ERROR |                        100000000 |                        000000111
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_r_reg' using encoding 'one-hot' in module 'sdcard_init'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   32 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 1     
-	   2 Input    6 Bit       Adders := 1     
-+---Registers : 
-	               48 Bit    Registers := 1     
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
-	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 2     
-	                1 Bit    Registers := 8     
-+---Muxes : 
-	   2 Input   48 Bit        Muxes := 6     
-	  20 Input   48 Bit        Muxes := 2     
-	  20 Input   32 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 1     
-	  20 Input   16 Bit        Muxes := 2     
-	   7 Input   16 Bit        Muxes := 1     
-	   9 Input   16 Bit        Muxes := 2     
-	   2 Input   10 Bit        Muxes := 6     
-	   9 Input    9 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 3     
-	   2 Input    8 Bit        Muxes := 16    
-	  10 Input    8 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 2     
-	  20 Input    6 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 4     
-	   4 Input    6 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 23    
-	   3 Input    5 Bit        Muxes := 1     
-	  20 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 15    
-	  20 Input    4 Bit        Muxes := 1     
-	   3 Input    4 Bit        Muxes := 2     
-	   5 Input    4 Bit        Muxes := 2     
-	   2 Input    3 Bit        Muxes := 4     
-	   3 Input    3 Bit        Muxes := 1     
-	  20 Input    2 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 1     
-	  20 Input    1 Bit        Muxes := 17    
-	   2 Input    1 Bit        Muxes := 23    
-	   3 Input    1 Bit        Muxes := 2     
-	   4 Input    1 Bit        Muxes := 1     
-	   9 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -263,45 +167,55 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port hex_segA[7] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[6] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[5] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[4] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segA[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridA[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[7] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[6] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[5] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[4] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_segB[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[3] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[2] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[1] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hex_gridB[0] in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_DQ3 in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_CLK in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_DQ0 in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SD_CMD in module runman_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset_rtl_0 in module runman_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1999.785 ; gain = 588.152
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+------------+---------------------------+---------------+----------------+
-|Module Name | RTL Object                | Depth x Width | Implemented As | 
-+------------+---------------------------+---------------+----------------+
-|SdCardCtrl  | getCmdResponse_v          | 32x1          | LUT            | 
-|SdCardCtrl  | doDeselect_v              | 32x1          | LUT            | 
-|SdCardCtrl  | cs_bo                     | 32x1          | LUT            | 
-|sdcard_init | m_sdcard/getCmdResponse_v | 32x1          | LUT            | 
-|sdcard_init | m_sdcard/doDeselect_v     | 32x1          | LUT            | 
-|sdcard_init | m_sdcard/cs_bo            | 32x1          | LUT            | 
-+------------+---------------------------+---------------+----------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1930.938 ; gain = 501.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1931.770 ; gain = 502.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1931.770 ; gain = 502.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -318,93 +232,80 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin data_manager_i:wr_en to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------------------------+----------+
-|      |BlackBox name                   |Instances |
-+------+--------------------------------+----------+
-|1     |data_manager_clk_wiz_0_0        |         1|
-|2     |data_manager_fifo_generator_0_0 |         1|
-+------+--------------------------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ila_0         |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+------------------------------+------+
-|      |Cell                          |Count |
-+------+------------------------------+------+
-|1     |data_manager_clk_wiz_0        |     1|
-|2     |data_manager_fifo_generator_0 |     1|
-|3     |CARRY4                        |    25|
-|4     |LUT1                          |     3|
-|5     |LUT2                          |    21|
-|6     |LUT3                          |    49|
-|7     |LUT4                          |    47|
-|8     |LUT5                          |    60|
-|9     |LUT6                          |   138|
-|10    |FDRE                          |   188|
-|11    |FDSE                          |     1|
-|12    |IBUF                          |     1|
-|13    |OBUF                          |    28|
-+------+------------------------------+------+
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |ila   |     1|
+|2     |LUT1  |     1|
+|3     |IBUF  |     1|
+|4     |OBUFT |    28|
++------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1999.785 ; gain = 514.043
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.785 ; gain = 588.152
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1938.625 ; gain = 509.352
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1938.625 ; gain = 509.352
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1999.785 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1938.625 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1999.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1955.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: d448c176
+Synth Design complete, checksum: 82c5a25e
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 64 Warnings, 1 Critical Warnings and 0 Errors encountered.
+26 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1999.785 ; gain = 962.430
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1955.137 ; gain = 888.223
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ramseyv2/repos/RunmanFPGAWavPlayer/RunmanFPGAWavPlayer.runs/synth_1/runman_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file runman_top_utilization_synth.rpt -pb runman_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 13 16:23:46 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 13 17:20:25 2023...

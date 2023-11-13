@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1699914177">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1699917580">
   <File Type="ROUTE-PWR" Name="runman_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="runman_top.tcl"/>
   <File Type="BITSTR-MMI" Name="runman_top.mmi"/>
@@ -81,8 +81,16 @@
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/runman_top.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/data_manager/data_manager.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -90,6 +98,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design_source/hex.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="U:/Downloads/lab6_2_provided/lab6.2_provided/design_source/hex.sv"/>
         <Attr Name="ImportTime" Val="1697656616"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -99,6 +108,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/sdcard_init/sdcard_init.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="U:/Downloads/sdcard_init-20231110T191917Z-001/sdcard_init/sdcard_init.sv"/>
         <Attr Name="ImportTime" Val="1699643975"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -108,6 +118,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/sdcard_init/Common.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="U:/Downloads/sdcard_init-20231110T191917Z-001/sdcard_init/Common.vhd"/>
         <Attr Name="ImportTime" Val="1699643975"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -116,16 +127,10 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/sdcard_init/SDCard.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="U:/Downloads/sdcard_init-20231110T191917Z-001/sdcard_init/SDCard.vhd"/>
         <Attr Name="ImportTime" Val="1699643975"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/runman_top.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -146,6 +151,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/sd_pinout.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -177,4 +183,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="data_manager_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="data_manager_fifo_generator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>
