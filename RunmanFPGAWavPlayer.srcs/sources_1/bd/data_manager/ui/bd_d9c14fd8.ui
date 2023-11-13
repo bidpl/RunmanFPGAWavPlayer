@@ -1,38 +1,38 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.865217",
-   "Default View_TopLeft":"-363,-288",
+   "Default View_TopLeft":"-363,-290",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x -230 -y 180 -defaultsOSRD
 preplace port port-id_reset_rtl_0 -pg 1 -lvl 0 -x -230 -y 160 -defaultsOSRD
-preplace port port-id_full -pg 1 -lvl 3 -x 410 -y -170 -defaultsOSRD
-preplace port port-id_almost_full -pg 1 -lvl 3 -x 410 -y -140 -defaultsOSRD
-preplace port port-id_empty -pg 1 -lvl 3 -x 410 -y -190 -defaultsOSRD
-preplace port port-id_almost_empty -pg 1 -lvl 3 -x 410 -y -210 -defaultsOSRD
+preplace port port-id_full -pg 1 -lvl 3 -x 400 -y -170 -defaultsOSRD
+preplace port port-id_almost_full -pg 1 -lvl 3 -x 400 -y -140 -defaultsOSRD
+preplace port port-id_empty -pg 1 -lvl 3 -x 400 -y -190 -defaultsOSRD
+preplace port port-id_almost_empty -pg 1 -lvl 3 -x 400 -y -210 -defaultsOSRD
 preplace port port-id_wr_en -pg 1 -lvl 0 -x -230 -y -250 -defaultsOSRD
 preplace port port-id_rd_en -pg 1 -lvl 0 -x -230 -y -270 -defaultsOSRD
 preplace port port-id_srst -pg 1 -lvl 0 -x -230 -y -210 -defaultsOSRD
-preplace port port-id_clk_50 -pg 1 -lvl 3 -x 410 -y -250 -defaultsOSRD
-preplace portBus dout -pg 1 -lvl 3 -x 410 -y -230 -defaultsOSRD
+preplace port port-id_clk_50 -pg 1 -lvl 3 -x 400 -y -250 -defaultsOSRD
+preplace portBus dout -pg 1 -lvl 3 -x 400 -y -230 -defaultsOSRD
 preplace portBus din -pg 1 -lvl 0 -x -230 -y -230 -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 2 -x 230 -y 0 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 2 -x 230 -y 20 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -110 -y 170 -defaultsOSRD
 preplace netloc clk_100MHz_1 1 0 1 NJ 180
-preplace netloc reset_rtl_0_1 1 0 1 NJ 160
 preplace netloc clk_wiz_0_clk_out1 1 1 2 0 -250 N
-preplace netloc fifo_generator_0_full 1 1 2 60 -180 390
-preplace netloc fifo_generator_0_almost_empty 1 1 2 70 -170 380J
-preplace netloc fifo_generator_0_empty 1 1 2 40 -190 NJ
-preplace netloc fifo_generator_0_almost_full 1 1 2 50 -210 NJ
-preplace netloc fifo_generator_0_dout 1 1 2 30 -230 NJ
 preplace netloc din_1 1 0 2 NJ -230 10
-preplace netloc wr_en_1 1 0 2 NJ -250 -10
+preplace netloc fifo_generator_0_dout 1 1 2 30 -230 NJ
+preplace netloc fifo_generator_0_empty 1 1 2 50 -190 NJ
+preplace netloc fifo_generator_0_full 1 1 2 60 -170 N
 preplace netloc rd_en_1 1 0 2 NJ -270 20
+preplace netloc reset_rtl_0_1 1 0 1 NJ 160
 preplace netloc srst_1 1 0 2 NJ -210 -20
-levelinfo -pg 1 -230 -110 230 410
-pagesize -pg 1 -db -bbox -sgen -360 -290 550 340
+preplace netloc wr_en_1 1 0 2 NJ -250 -10
+preplace netloc fifo_generator_0_almost_full 1 1 2 70 -150 380J
+preplace netloc fifo_generator_0_almost_empty 1 1 2 40 -210 NJ
+levelinfo -pg 1 -230 -110 230 400
+pagesize -pg 1 -db -bbox -sgen -360 -290 540 340
 "
 }
 {
