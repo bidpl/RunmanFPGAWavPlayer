@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ipshared/7698" \
+"../../../../RunmanFPGAWavPlayer.ip_user_files/bd/data_manager/ip/data_manager_fifo_generator_0_0/sim/data_manager_fifo_generator_0_0.v" \
+"../../../../RunmanFPGAWavPlayer.ip_user_files/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0_clk_wiz.v" \
+"../../../../RunmanFPGAWavPlayer.ip_user_files/bd/data_manager/ip/data_manager_clk_wiz_0_0/data_manager_clk_wiz_0_0.v" \
+"../../../../RunmanFPGAWavPlayer.ip_user_files/bd/data_manager/sim/data_manager.v" \
+
+sv xil_defaultlib  --include "../../../../RunmanFPGAWavPlayer.gen/sources_1/bd/data_manager/ipshared/7698" \
+"../../../../RunmanFPGAWavPlayer.srcs/sources_1/imports/design_source/hex.sv" \
+"../../../../RunmanFPGAWavPlayer.srcs/sources_1/new/runman_top.sv" \
+"../../../../RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/sdcard_init.sv" \
+"../../../../RunmanFPGAWavPlayer.srcs/sim_1/new/sd_card_test.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -50,11 +50,7 @@ module runman_top(
     logic ram_init_error;
     logic ram_op_begun;
     logic [24:0] ram_address;
-    logic ram_we;
-    logic cs_bo;
-    logic sclk_o;
-    logic mosi_o;
-    logic miso_i;    
+    logic ram_we;  
     
     assign test = 1'b1;
     
@@ -71,8 +67,8 @@ module runman_top(
 	.ram_init_done(ram_init_done),  //done with reading all MAX_RAM_ADDRESS words
 	.cs_bo(SD_DQ3), //SD card pins (also make sure to disable USB CS if using DE10-Lite)
 	.sclk_o(SD_CLK),
-	.mosi_o(SD_DQ0),
-	.miso_i(SD_CMD)
+	.mosi_o(SD_CMD),
+	.miso_i(SD_DQ0)
     );
     
     
@@ -103,7 +99,7 @@ module runman_top(
     HexDriver hex_seg_disB(
     .clk(Clk),
     .reset(reset_rtl_0),
-    .in({test, data_from_sd[11:8], data_from_sd[7:4], data_from_sd[3:0]}),
+    .in({{test, ram_init_error, ram_init_done, ~almost_full}, data_from_sd[11:8], data_from_sd[7:4], data_from_sd[3:0]}),
     .hex_seg(hex_segB),
     .hex_grid(hex_gridB)  
     );
