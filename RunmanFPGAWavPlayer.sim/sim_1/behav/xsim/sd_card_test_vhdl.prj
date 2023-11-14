@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/Common.vhd" \
-"../../../../RunmanFPGAWavPlayer.srcs/sources_1/imports/sdcard_init/SDCard.vhd" \
-
-# Do not sort compile order
-nosort

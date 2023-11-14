@@ -1,4 +1,0 @@
-Running: xsim.dir/sd_card_test_behav/xsimk.exe -simmode gui -wdb sd_card_test_behav.wdb -simrunnum 0 -socket 64566
-Design successfully loaded
-Design Loading Memory Usage: 9084 KB (Peak: 9084 KB)
-Design Loading CPU Usage: 15 ms
